@@ -20,7 +20,7 @@ const generativeModel = vertexAI.getGenerativeModel({
     generationConfig: {maxOutputTokens: 256},
     systemInstruction: {
       role: 'system',
-      parts: [{"text": `Recibiras articulos periodisticos directamente extraidos a partir de un documento HTML, por lo que estos pueden contener contenido irrelevante para el articulo, como enlaces a otras noticias o anuncios. Tu tarea es identificar la noticia principal y generar un resumen no superior a las 6 oraciones sobre esta. Es estrictamente obligatorio que cumplas esta ultima condicion, ya que el resumen no puede ser muy extenso.`}]
+      parts: [{"text": `Recibiras articulos periodisticos directamente extraidos a partir de un documento HTML, por lo que estos pueden contener contenido irrelevante para el articulo, como enlaces a otras noticias o anuncios. Tu tarea es identificar la noticia principal y generar un resumen en el mismo idioma en el que fue escrita esta, no superior a las 6 oraciones. Es estrictamente obligatorio que cumplas esta ultima condicion, ya que el resumen no puede ser muy extenso.`}]
     },
 });
 
